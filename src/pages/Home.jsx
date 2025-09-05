@@ -74,7 +74,7 @@ const Home = () => {
           </div>
           <button
             type="submit"
-            className="bg-blue-600 text-white rounded-xl h-12 px-6 font-medium hover:bg-blue-500 active:bg-blue-700 transition transform active:scale-95"
+            className="cursor-pointer bg-blue-600 text-white rounded-xl h-12 px-6 font-medium hover:bg-blue-500 active:bg-blue-700 transition transform active:scale-95"
           >
             Search
           </button>
@@ -83,7 +83,7 @@ const Home = () => {
         {/* Chart or Messages */}
         <div className="flex justify-center items-center h-[350px]">
           {isError ? (
-            <div className="text-red-500 font-medium">
+            <div className="text-gray-400">
               No data to display. Please search for a keyword.
             </div>
           ) : isFetching ? (
