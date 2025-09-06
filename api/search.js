@@ -1,5 +1,7 @@
 export default async function handler(req, res) {
 
+  const VITE_SERPAPI_KEY = "ccbd27a177c6aef830eb7abc1ede1b8ce223afe61bcd2261e2765cb87fc810ae"
+
   // Enable CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -21,7 +23,8 @@ export default async function handler(req, res) {
     
     // Use API key from environment variable (more secure)
     // const apiKey = process.env.VITE_SERPAPI_KEY;
-    const apiKey = process.env.SERPAPI_KEY || import.meta.env.VITE_SERPAPI_KEY;
+    // const apiKey = import.meta.env.VITE_SERPAPI_KEY || import.meta.env.VITE_SERPAPI_KEY;
+    const apiKey = VITE_SERPAPI_KEY
     
     if (!apiKey) {
       return res.status(500).json({ 
