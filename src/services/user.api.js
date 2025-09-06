@@ -7,7 +7,7 @@ export const searchApi = async (word) => {
         engine: "google_trends",
         q: word,
         date: "2020-01-01 2025-12-31",
-        api_key: import.meta.env.VITE_SERPAPI_KEY,
+        // api_key: import.meta.env.VITE_SERPAPI_KEY,
       },
     });
     return response.data;
@@ -22,7 +22,7 @@ export const searchRelatedApi = async (word) => {
     const response = await api.get("/api/search", {
       params: {
         q: word,
-        api_key: import.meta.env.VITE_SERPAPI_KEY,
+        // api_key: import.meta.env.VITE_SERPAPI_KEY,
         gl: "in",
         hl: "en",
       },
