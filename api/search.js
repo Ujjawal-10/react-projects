@@ -21,7 +21,7 @@ export default async function handler(req, res) {
     
     // Use API key from environment variable (more secure)
     // const apiKey = process.env.VITE_SERPAPI_KEY;
-    const apiKey = import.meta.env.VITE_SERPAPI_KEY
+    const apiKey = import.meta.env.SERPAPI_KEY || import.meta.env.VITE_SERPAPI_KEY;
     
     if (!apiKey) {
       return res.status(500).json({ 
